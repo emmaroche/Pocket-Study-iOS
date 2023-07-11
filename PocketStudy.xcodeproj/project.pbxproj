@@ -21,6 +21,7 @@
 		0462D66C2A5DA02A0051B790 /* LaunchScreenStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462D66B2A5DA02A0051B790 /* LaunchScreenStateManager.swift */; };
 		0462D66E2A5DA0470051B790 /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462D66D2A5DA0470051B790 /* LaunchScreenView.swift */; };
 		0462D6712A5DA40A0051B790 /* CustomColours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462D6702A5DA40A0051B790 /* CustomColours.swift */; };
+		0462D6772A5DBBC10051B790 /* WelcomeScreens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462D6762A5DBBC10051B790 /* WelcomeScreens.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		0462D66B2A5DA02A0051B790 /* LaunchScreenStateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenStateManager.swift; sourceTree = "<group>"; };
 		0462D66D2A5DA0470051B790 /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
 		0462D6702A5DA40A0051B790 /* CustomColours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColours.swift; sourceTree = "<group>"; };
+		0462D6762A5DBBC10051B790 /* WelcomeScreens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreens.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 				0462D6642A5D9F520051B790 /* Register */,
 				0462D6652A5D9F5D0051B790 /* Login */,
 				0462D6662A5D9F670051B790 /* Welcome */,
+				0462D6762A5DBBC10051B790 /* WelcomeScreens.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0462D6772A5DBBC10051B790 /* WelcomeScreens.swift in Sources */,
 				0462D66E2A5DA0470051B790 /* LaunchScreenView.swift in Sources */,
 				0462D66C2A5DA02A0051B790 /* LaunchScreenStateManager.swift in Sources */,
 				0462D6682A5D9FF30051B790 /* LaunchScreenSteps.swift in Sources */,
