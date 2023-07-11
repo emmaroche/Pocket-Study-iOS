@@ -131,10 +131,10 @@
 		0462D66F2A5DA3FD0051B790 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0462D6632A5D9F370051B790 /* Launch Views */,
 				0462D6642A5D9F520051B790 /* Register */,
 				0462D6652A5D9F5D0051B790 /* Login */,
 				0462D6662A5D9F670051B790 /* Welcome */,
-				0462D6632A5D9F370051B790 /* Launch Views */,
 			);
 			path = Views;
 			sourceTree = "<group>";
