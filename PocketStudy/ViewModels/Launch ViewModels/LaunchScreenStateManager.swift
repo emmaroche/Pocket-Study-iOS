@@ -11,13 +11,13 @@ import Foundation; final class LaunchScreenStateManager: ObservableObject {
 
 @MainActor @Published private(set) var state: LaunchScreenSteps = .stepOne
 
-    @MainActor func dismiss() {
-        Task {
-            state = .stepTwo
+@MainActor func dismiss() {
+    
+    state = .stepTwo
+    
+    state = .finished
+    
+  }
 
-            try? await Task.sleep(for: Duration.seconds(1))
-
-            self.state = .finished
-        }
-    }
 }
+

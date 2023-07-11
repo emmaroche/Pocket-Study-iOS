@@ -11,7 +11,7 @@ import SwiftUI
 
 struct LaunchScreenView: View {
     @EnvironmentObject private var launchScreenState: LaunchScreenStateManager // Mark 1
-
+    
     @State private var firstAnimation = false  // Mark 2
     @State private var secondAnimation = false // Mark 2
     @State private var startFadeoutAnimation = false // Mark 2
@@ -25,16 +25,16 @@ struct LaunchScreenView: View {
                 .scaledToFit()
                 .frame(width: 600, height: 800)
                 .rotationEffect(firstAnimation ? Angle(degrees: 360) : Angle(degrees: -360))
-
+            
             VStack {
                 Text("Pocket Study")
                     .foregroundColor(.black)
                     .font(.system(size: 36))
                     .fontWeight(.bold)
                     .padding(.all, 130)
-
+                
                 Spacer()
-
+                
                 Text("A smarter way to study")
                     .foregroundColor(.black)
                     .font(.system(size: 24))
@@ -56,7 +56,7 @@ struct LaunchScreenView: View {
     var body: some View {
         ZStack {
             backgroundColor  // Mark 3
-//            image  // Mark 3
+            //            image  // Mark 3
             imageWithText
         }.onReceive(animationTimer) { timerValue in
             updateAnimation()  // Mark 5

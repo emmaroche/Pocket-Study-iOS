@@ -27,8 +27,8 @@ struct PocketStudyApp: App {
     var body: some Scene {
             WindowGroup {
                 ZStack {
-                    ContentView()
-                    
+                    WelcomeScreens()
+
                     if launchScreenState.state != .finished {
                         LaunchScreenView()
                     }
