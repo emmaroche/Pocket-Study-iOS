@@ -113,7 +113,7 @@ struct WelcomeScreens: View {
                 })
                 
                 
-                NavigationLink(destination: ContentView()) {
+                NavigationLink(destination: LoginScreen()) {
                     Text("Get Started")
                         .font(.system(size: 20))
                         .fontWeight(.semibold)
@@ -121,7 +121,7 @@ struct WelcomeScreens: View {
                         .padding(.vertical, 15)
                         .foregroundColor(.black)
                         .background(CustomColour.DefaultBlue)
-                        .cornerRadius(10)
+                        .cornerRadius(12)
                     
                     
                 }.padding(.top, 30)
