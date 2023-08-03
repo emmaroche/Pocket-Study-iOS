@@ -7,6 +7,7 @@
 
 import SwiftUI
 import FirebaseCore
+import Firebase
 
 class AppDelegate: NSObject, UIApplicationDelegate {
   func application(_ application: UIApplication,
@@ -19,20 +20,35 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct PocketStudyApp: App {
     
-  @StateObject var launchScreenState = LaunchScreenStateManager()
+    @StateObject var launchScreenState = LaunchScreenStateManager()
     
-  // Registering app delegate for Firebase setup
-  @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-
+    // Registering app delegate for Firebase setup
+    
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    
+    @State private var loggedIn = false 
+    
     var body: some Scene {
-            WindowGroup {
+        WindowGroup {
+            if loggedIn {
+                HomeView()
+            } else {
                 ZStack {
                     WelcomeScreens()
 
                     if launchScreenState.state != .finished {
                         LaunchScreenView()
                     }
-                }.environmentObject(launchScreenState)
+                }
+                .environmentObject(launchScreenState)
+                .onAppear {
+                    // Observer to listen for authentication state changes
+                    Auth.auth().addStateDidChangeListener { (auth, user) in
+                        loggedIn = user != nil
+                    }
+                }
             }
         }
     }
+}
+
