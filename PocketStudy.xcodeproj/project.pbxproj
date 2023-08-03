@@ -24,9 +24,12 @@
 		0462D6772A5DBBC10051B790 /* WelcomeScreens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462D6762A5DBBC10051B790 /* WelcomeScreens.swift */; };
 		0462D6792A5EC77E0051B790 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462D6782A5EC77D0051B790 /* LoginScreen.swift */; };
 		0462D67B2A5ECBBA0051B790 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462D67A2A5ECBBA0051B790 /* CustomTextField.swift */; };
-		0462D67E2A5ECD520051B790 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462D67D2A5ECD520051B790 /* LoginModel.swift */; };
+		0462D67E2A5ECD520051B790 /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462D67D2A5ECD520051B790 /* AccountModel.swift */; };
 		04F2FAD32A5EE3CB00DEC486 /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F2FAD22A5EE3CB00DEC486 /* RegisterScreen.swift */; };
 		04F2FAD52A5EEFDF00DEC486 /* CustomBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F2FAD42A5EEFDF00DEC486 /* CustomBackButton.swift */; };
+		04F2FAD82A61563D00DEC486 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F2FAD72A61563D00DEC486 /* AccountView.swift */; };
+		04F2FADB2A7BE28100DEC486 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F2FADA2A7BE28100DEC486 /* HomeView.swift */; };
+		04F2FADD2A7BEAC300DEC486 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F2FADC2A7BEAC300DEC486 /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,9 +46,12 @@
 		0462D6762A5DBBC10051B790 /* WelcomeScreens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreens.swift; sourceTree = "<group>"; };
 		0462D6782A5EC77D0051B790 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		0462D67A2A5ECBBA0051B790 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
-		0462D67D2A5ECD520051B790 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		0462D67D2A5ECD520051B790 /* AccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
 		04F2FAD22A5EE3CB00DEC486 /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
 		04F2FAD42A5EEFDF00DEC486 /* CustomBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackButton.swift; sourceTree = "<group>"; };
+		04F2FAD72A61563D00DEC486 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		04F2FADA2A7BE28100DEC486 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		04F2FADC2A7BEAC300DEC486 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +138,7 @@
 			children = (
 				0462D6782A5EC77D0051B790 /* LoginScreen.swift */,
 				0462D67A2A5ECBBA0051B790 /* CustomTextField.swift */,
+				04F2FADC2A7BEAC300DEC486 /* LoadingView.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -139,6 +146,7 @@
 		0462D6662A5D9F670051B790 /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
+				0462D6762A5DBBC10051B790 /* WelcomeScreens.swift */,
 			);
 			path = Welcome;
 			sourceTree = "<group>";
@@ -146,11 +154,12 @@
 		0462D66F2A5DA3FD0051B790 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				04F2FAD92A7BE26C00DEC486 /* Home */,
+				04F2FAD62A61562400DEC486 /* Account */,
 				0462D6632A5D9F370051B790 /* Launch Views */,
 				0462D6642A5D9F520051B790 /* Register */,
 				0462D6652A5D9F5D0051B790 /* Login */,
 				0462D6662A5D9F670051B790 /* Welcome */,
-				0462D6762A5DBBC10051B790 /* WelcomeScreens.swift */,
 				04F2FAD42A5EEFDF00DEC486 /* CustomBackButton.swift */,
 			);
 			path = Views;
@@ -159,7 +168,7 @@
 		0462D6722A5DB3CB0051B790 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				0462D67C2A5ECD410051B790 /* Login Model */,
+				0462D67C2A5ECD410051B790 /* Login & Sign Up Model */,
 				0462D6702A5DA40A0051B790 /* CustomColours.swift */,
 				0462D6732A5DB3D90051B790 /* Launch Models */,
 			);
@@ -190,12 +199,28 @@
 			path = "Launch ViewModels";
 			sourceTree = "<group>";
 		};
-		0462D67C2A5ECD410051B790 /* Login Model */ = {
+		0462D67C2A5ECD410051B790 /* Login & Sign Up Model */ = {
 			isa = PBXGroup;
 			children = (
-				0462D67D2A5ECD520051B790 /* LoginModel.swift */,
+				0462D67D2A5ECD520051B790 /* AccountModel.swift */,
 			);
-			path = "Login Model";
+			path = "Login & Sign Up Model";
+			sourceTree = "<group>";
+		};
+		04F2FAD62A61562400DEC486 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				04F2FAD72A61563D00DEC486 /* AccountView.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		04F2FAD92A7BE26C00DEC486 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				04F2FADA2A7BE28100DEC486 /* HomeView.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,16 +305,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				0462D6772A5DBBC10051B790 /* WelcomeScreens.swift in Sources */,
+				04F2FADB2A7BE28100DEC486 /* HomeView.swift in Sources */,
 				0462D66E2A5DA0470051B790 /* LaunchScreenView.swift in Sources */,
 				0462D66C2A5DA02A0051B790 /* LaunchScreenStateManager.swift in Sources */,
 				0462D6682A5D9FF30051B790 /* LaunchScreenSteps.swift in Sources */,
 				0462D64A2A5D9B940051B790 /* ContentView.swift in Sources */,
-				0462D67E2A5ECD520051B790 /* LoginModel.swift in Sources */,
+				0462D67E2A5ECD520051B790 /* AccountModel.swift in Sources */,
 				0462D6792A5EC77E0051B790 /* LoginScreen.swift in Sources */,
+				04F2FADD2A7BEAC300DEC486 /* LoadingView.swift in Sources */,
 				04F2FAD32A5EE3CB00DEC486 /* RegisterScreen.swift in Sources */,
 				0462D6712A5DA40A0051B790 /* CustomColours.swift in Sources */,
 				04F2FAD52A5EEFDF00DEC486 /* CustomBackButton.swift in Sources */,
 				0462D6482A5D9B940051B790 /* PocketStudyApp.swift in Sources */,
+				04F2FAD82A61563D00DEC486 /* AccountView.swift in Sources */,
 				0462D67B2A5ECBBA0051B790 /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

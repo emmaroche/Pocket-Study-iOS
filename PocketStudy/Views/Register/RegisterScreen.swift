@@ -12,15 +12,15 @@ struct RegisterScreen: View {
     @StateObject var modelData = Model()
     
     var body: some View {
+        
+        ZStack{
             VStack{
-                    
-                    Text("Sign Up")
-                        .font(.system(size: UIScreen.main.bounds.width * 0.06))
-                        .fontWeight(.bold)
-                        .padding(.bottom, 10)
-                        .padding(.top, 20)
-                    
-
+                
+                Text("Sign Up")
+                    .font(.system(size: UIScreen.main.bounds.width * 0.06))
+                    .fontWeight(.bold)
+                    .padding(.bottom, 10)
+                    .padding(.top, 20)
                 
                 Text("Unlock a world of organised and efficient studying, tailored to your unique study goals!")
                     .padding(.horizontal, 20)
@@ -28,7 +28,7 @@ struct RegisterScreen: View {
                     .fontWeight(.semibold)
                     .font(.system(size: UIScreen.main.bounds.width * 0.04))
                     .multilineTextAlignment(.center)
-
+                
                 VStack(spacing: 4){
                     
                     HStack(spacing: 0) {
@@ -52,7 +52,7 @@ struct RegisterScreen: View {
                     .padding(.horizontal, 20)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     
-                    CustomTextFieldRegister(image: "envelope.fill", placeHolderText: "Enter Email Address", text: $modelData.email)
+                    CustomTextFieldRegister(image: "envelope.fill", placeHolderText: "Enter Email Address", text: $modelData.emailSignUp)
                         .padding(.bottom, 15)
                     
                     HStack(spacing: 0) {
@@ -64,7 +64,7 @@ struct RegisterScreen: View {
                     .padding(.horizontal, 20)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     
-                    CustomTextFieldRegister(image: "lock.fill", placeHolderText: "Enter Password", text: $modelData.password)   .padding(.bottom, 15)
+                    CustomTextFieldRegister(image: "lock.fill", placeHolderText: "Enter Password", text: $modelData.passwordSignUp)   .padding(.bottom, 15)
                     
                     HStack(spacing: 0) {
                         Text("Re-Enter Password")
@@ -79,7 +79,7 @@ struct RegisterScreen: View {
                     
                 }
                 
-                Button(action: {}) {
+                Button(action: modelData.register) {
                     
                     Text("Sign Up")
                         .foregroundColor(Color.black)
@@ -97,10 +97,31 @@ struct RegisterScreen: View {
                 Spacer()
                 
             }
-            .background(CustomColour.DefaultOrange)
-            .navigationBarItems(leading: CustomBackButton())
-            .navigationBarBackButtonHidden(true)
-  }
+            
+            if modelData.isLoading{
+                LoadingView()
+            }
+        }
+        .background(CustomColour.DefaultOrange)
+        .navigationBarItems(leading: CustomBackButton())
+        .navigationBarBackButtonHidden(true)
+        
+        // Alerts
+        
+        .alert(isPresented: $modelData.alert, content: {
+            Alert(title: Text("Message"), message: Text(modelData.alertMessage), dismissButton: .destructive(Text("Ok"), action: {
+                if modelData.alertMessage == "Sign-Up Complete! Please Sign in to your new account." {
+                
+                    modelData.signUp.toggle()
+                    modelData.name = ""
+                    modelData.emailSignUp = ""
+                    modelData.passwordSignUp = ""
+                    modelData.passwordConfirm = ""
+                }
+                
+            }))
+        })
+    }
 }
 
 struct CustomTextFieldRegister: View {

@@ -97,14 +97,16 @@ struct WelcomeScreens: View {
                         
                         Circle()
                             .foregroundColor(CustomColour.DefaultBlue)
-                            .frame(width: 28, height: 28)
-                            .padding(.all, 30)
+                            .frame(width: 16, height: 16)
+                            .padding(.vertical, 30)
+                            .padding(.horizontal, 8)
                         
                         if isSelected {
                             Circle()
                                 .foregroundColor(Color.white)
-                                .frame(width: 16, height: 16)
-                                .padding(.all, 30)
+                                .frame(width: 8, height: 8)
+                                .padding(.vertical, 30)
+                                .padding(.horizontal, 8)
                         }
                     }
                 },
